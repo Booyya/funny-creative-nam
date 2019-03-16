@@ -2,19 +2,19 @@ var express = require('express');
 var app = express();
 var expressWs = require('express-ws')(app);
 var clientList = [];
-var endTime = new Date().getTime();
+var startTime = new Date().getTime();
 
-app.ws('/chatWS', function(ws, req) { ws.send(endTime);
+console.log('hi!')
+
+app.ws('/chatWS', function(ws, req) { ws.send(startTime)
+  console.log('loaded')
   ws.on('message', function(msg) {
+  	console.log(msg)
     for(var i = 0;i<clientList.length;i++){
       try{
-      if(new Date().getTime() - 10000 < msg < new Date().getTime()+10000){
-        endTime = new Date().getTime();
-      }
-      else{
       clientList[i].send(msg);
       console.log(req);
-      }}
+      }
       catch(e){
         console.log(e);
       }
@@ -33,4 +33,4 @@ app.ws('/chatWS', function(ws, req) { ws.send(endTime);
 });
 
 app.use(express.static("static"))
-app.listen(3000,()=>console.log("server started"));
+app.listen(3000)

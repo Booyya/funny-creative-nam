@@ -1,5 +1,8 @@
 {
-  "requires": true,
+  "name":"blairhacks",
+  "description":"Higgs is a bad teacher",
+  "license":"MIT",
+  "repository":"amazing",
   "lockfileVersion": 1,
   "dependencies": {
     "accepts": {
