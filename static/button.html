@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	  crossorigin="anonymous">
+    <style>
+      .container{
+        text-align:center;
+      }
+      .importantBox{
+        font-size:100px;
+        size:1000px;
+        text-align:center;
+      }
+    </style>
+    <script src="script.js"></script>
+    <title>Hack The World</title>
+  </head>
+  <body onLoad = "g = setInterval('timer(endTime)', 1000);">
+    <div class="container">
+      <form id="timeForm" class="bigboy"> '
+        <input class = "importantBox" type="text" id = "timerButton" value="1:00:00" readonly>
+        <br><br><br>
+        <input class="btn btn-danger btn-lg" type="button" value = "Restart the timer!" id="timerText" onClick="verify();" size = "30px">
+      </form>
+    </div>
+  </body>
+</html>
